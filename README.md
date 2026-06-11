@@ -38,15 +38,3 @@ The pipeline tracks the dynamic evolution of brain network connectivity over the
 | **8A — Interactive 3D Visualization** | Interactive glass-brain HTML visualizations of group-level VPA maps | [`codes/run_interactive_html.py`](codes/run_interactive_html.py) |
 | **8B — High-Resolution Surface Rendering** | Auto-generate SurfIce scripts for publication-quality surface renderings | [`codes/run_surfice_render.py`](codes/run_surfice_render.py), [`codes/export_surfice.py`](codes/export_surfice.py) |
 
-### Other Scripts
-
-| Script | Purpose |
-|:-------|:--------|
-| [`codes/check_shape.py`](codes/check_shape.py) | Sanity-check array/data shapes during development |
-| [`codes/debug_vpa.py`](codes/debug_vpa.py) | Debugging helper for the VPA computation |
-| [`codes/get_pvalues.py`](codes/get_pvalues.py) | Extract p-values from group statistics outputs |
-| [`codes/investigate_bg_cb.py`](codes/investigate_bg_cb.py) | Investigate basal ganglia / cerebellum results |
-| [`codes/verify_vpa_regions.py`](codes/verify_vpa_regions.py) | Verify VPA results against expected anatomical regions |
-| [`codes/subjectlist.txt`](codes/subjectlist.txt) | List of subject IDs used across the pipeline |
-
-For the full methodological write-up (rationale, equations, and design notes for each stage), see [`codes/Hybrid_Dynamic_Decoding_Pipeline.md`](codes/Hybrid_Dynamic_Decoding_Pipeline.md).
