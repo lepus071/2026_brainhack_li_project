@@ -1,0 +1,6 @@
+data/
+work/
+codes/logs_preprocess/
+codes/legacy_glm_fmriprep/
+*.err
+*Zone.Identifier
