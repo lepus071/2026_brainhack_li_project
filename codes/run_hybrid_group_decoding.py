@@ -17,7 +17,7 @@ import os
 import sys
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import LeaveOneGroupOut
+from sklearn.model_selection import LeaveOneGroupOut, GroupKFold
 from sklearn.metrics import r2_score
 from sklearn.linear_model import RidgeCV
 from sklearn.preprocessing import StandardScaler
@@ -166,33 +166,42 @@ def main():
         
         Y_tr = scaler_Y.transform(Y_tr_raw)
         Y_te = scaler_Y.transform(Y_te_raw)
-        
+
+        # GROUP-AWARE INNER CV: alpha selection must respect subject grouping,
+        # otherwise RidgeCV's default leave-one-sample-out GCV leaks across
+        # autocorrelated sliding-window samples from the same subject.
+        groups_tr = cv_groups[train_idx]
+        n_inner_splits = len(np.unique(groups_tr))
+
+        def make_cv():
+            return GroupKFold(n_splits=n_inner_splits).split(X_tr, Y_tr, groups=groups_tr)
+
         # 1. Full Model (e, xf, xs)
-        clf = RidgeCV(alphas=alphas).fit(X_tr, Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr, Y_tr)
         Y_pred_full[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te))
-        
+
         # 2. No e (xf, xs) - col 1,2
-        clf = RidgeCV(alphas=alphas).fit(X_tr[:, 1:], Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr[:, 1:], Y_tr)
         Y_pred_no_e[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te[:, 1:]))
-        
+
         # 3. No xf (e, xs) - col 0,2
-        clf = RidgeCV(alphas=alphas).fit(X_tr[:, [0,2]], Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr[:, [0,2]], Y_tr)
         Y_pred_no_xf[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te[:, [0,2]]))
-        
+
         # 4. No xs (e, xf) - col 0,1
-        clf = RidgeCV(alphas=alphas).fit(X_tr[:, [0,1]], Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr[:, [0,1]], Y_tr)
         Y_pred_no_xs[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te[:, [0,1]]))
-        
+
         # 5. e only - col 0
-        clf = RidgeCV(alphas=alphas).fit(X_tr[:, [0]], Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr[:, [0]], Y_tr)
         Y_pred_e[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te[:, [0]]))
-        
+
         # 6. xf only - col 1
-        clf = RidgeCV(alphas=alphas).fit(X_tr[:, [1]], Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr[:, [1]], Y_tr)
         Y_pred_xf[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te[:, [1]]))
-        
+
         # 7. xs only - col 2
-        clf = RidgeCV(alphas=alphas).fit(X_tr[:, [2]], Y_tr)
+        clf = RidgeCV(alphas=alphas, cv=make_cv()).fit(X_tr[:, [2]], Y_tr)
         Y_pred_xs[test_idx] = scaler_Y.inverse_transform(clf.predict(X_te[:, [2]]))
         
         fold += 1
