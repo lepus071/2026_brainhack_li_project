@@ -153,9 +153,7 @@ def main():
     print(f"\ncd {OUTPUT_DIR}\n")
 
     vpa_parts = [
-        "Unique_e",   "Unique_xf",   "Unique_xs",
-        "Shared_e_xf", "Shared_xf_xs", "Shared_e_xs",
-        "Shared_all"
+        "Unique_xf_2v", "Unique_xs_2v", "Shared_xf_xs_2v", "Full_xf_xs"
     ]
 
     for part in vpa_parts:

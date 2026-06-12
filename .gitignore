@@ -2,5 +2,7 @@ data/
 work/
 codes/logs_preprocess/
 codes/legacy_glm_fmriprep/
+**/__pycache__/
+**/nilearn_cache/
 *.err
 *Zone.Identifier

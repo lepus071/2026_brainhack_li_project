@@ -1,0 +1,75 @@
+
+=== Unique_e_R2 (corrected -> Unique_e_partial_R2) (top 10 ROIs) ===
+   1. ROI# 57  R2=0.2849  (orig_unique_e=0.1383)  7Networks_LH_SomMot_24
+   2. ROI# 47  R2=0.1859  (orig_unique_e=0.0000)  7Networks_LH_SomMot_14
+   3. ROI#313  R2=0.1752  (orig_unique_e=0.2216)  7Networks_RH_SalVentAttn_Med_2
+   4. ROI#138  R2=0.1401  (orig_unique_e=0.1585)  7Networks_LH_Cont_PFCl_3
+   5. ROI#430  R2=0.1366  (orig_unique_e=0.0316)  AAL3_Vermis_1_2
+   6. ROI#438  R2=0.1296  (orig_unique_e=0.1709)  AAL3_Thal_AV_L
+   7. ROI#398  R2=0.1271  (orig_unique_e=0.0392)  7Networks_RH_Default_pCunPCC_6
+   8. ROI#369  R2=0.1220  (orig_unique_e=0.1487)  7Networks_RH_Default_Temp_2
+   9. ROI#450  R2=0.1138  (orig_unique_e=0.2346)  AAL3_Thal_Re_L
+  10. ROI# 43  R2=0.0993  (orig_unique_e=0.2129)  7Networks_LH_SomMot_10
+
+=== Unique_xf_R2 (top 10 ROIs) ===
+   1. ROI# 57  R2=0.2625  7Networks_LH_SomMot_24
+   2. ROI# 65  R2=0.1793  7Networks_LH_SomMot_33
+   3. ROI#319  R2=0.1784  7Networks_RH_SalVentAttn_Med_8
+   4. ROI# 40  R2=0.1446  7Networks_LH_SomMot_7
+   5. ROI#345  R2=0.1403  7Networks_RH_Cont_PFCl_4
+   6. ROI# 84  R2=0.1259  7Networks_LH_DorsAttn_Post_15
+   7. ROI#442  R2=0.1239  AAL3_Thal_VA_L
+   8. ROI#438  R2=0.1188  AAL3_Thal_AV_L
+   9. ROI#287  R2=0.1176  7Networks_RH_DorsAttn_Post_16
+  10. ROI#450  R2=0.1094  AAL3_Thal_Re_L
+
+=== Unique_xs_R2 (top 10 ROIs) ===
+   1. ROI# 65  R2=0.1689  7Networks_LH_SomMot_33
+   2. ROI# 58  R2=0.1446  7Networks_LH_SomMot_26
+   3. ROI# 84  R2=0.1103  7Networks_LH_DorsAttn_Post_15
+   4. ROI#289  R2=0.1039  7Networks_RH_DorsAttn_Post_18
+   5. ROI# 32  R2=0.0908  7Networks_LH_Vis_30
+   6. ROI#287  R2=0.0828  7Networks_RH_DorsAttn_Post_16
+   7. ROI#438  R2=0.0743  AAL3_Thal_AV_L
+   8. ROI#317  R2=0.0691  7Networks_RH_SalVentAttn_Med_6
+   9. ROI#210  R2=0.0654  7Networks_RH_Vis_9
+  10. ROI#186  R2=0.0635  7Networks_LH_Default_PFC_20
+
+=== Shared_e_xf_R2 (top 10 ROIs) ===
+   1. ROI# 58  R2=0.2814  7Networks_LH_SomMot_26
+   2. ROI# 65  R2=0.1813  7Networks_LH_SomMot_33
+   3. ROI#312  R2=0.1424  7Networks_RH_SalVentAttn_Med_1
+   4. ROI#289  R2=0.1284  7Networks_RH_DorsAttn_Post_18
+   5. ROI#345  R2=0.1280  7Networks_RH_Cont_PFCl_4
+   6. ROI#217  R2=0.1112  7Networks_RH_Vis_16
+   7. ROI#  4  R2=0.0948  7Networks_LH_Vis_2
+   8. ROI#122  R2=0.0938  7Networks_LH_Limbic_TempPole_3
+   9. ROI#461  R2=0.0928  AAL3_Thal_PuI_R
+  10. ROI# 84  R2=0.0914  7Networks_LH_DorsAttn_Post_15
+
+=== Shared_xf_xs_R2 (top 10 ROIs) ===
+   1. ROI# 57  R2=0.2004  7Networks_LH_SomMot_24
+   2. ROI# 32  R2=0.1870  7Networks_LH_Vis_30
+   3. ROI#186  R2=0.1752  7Networks_LH_Default_PFC_20
+   4. ROI#418  R2=0.1607  AAL3_Cerebellum_4_5_L
+   5. ROI#192  R2=0.1459  7Networks_LH_Default_pCunPCC_2
+   6. ROI#341  R2=0.1459  7Networks_RH_Cont_PFCv_1
+   7. ROI#442  R2=0.1129  AAL3_Thal_VA_L
+   8. ROI# 61  R2=0.1108  7Networks_LH_SomMot_29
+   9. ROI#210  R2=0.1090  7Networks_RH_Vis_9
+  10. ROI#450  R2=0.1034  AAL3_Thal_Re_L
+
+=== Shared_e_xs_R2 (top 10 ROIs) ===
+   1. ROI#418  R2=0.1558  AAL3_Cerebellum_4_5_L
+   2. ROI#210  R2=0.1393  7Networks_RH_Vis_9
+   3. ROI#186  R2=0.1150  7Networks_LH_Default_PFC_20
+   4. ROI#266  R2=0.1053  7Networks_RH_SomMot_35
+   5. ROI# 23  R2=0.0876  7Networks_LH_Vis_21
+   6. ROI#170  R2=0.0869  7Networks_LH_Default_PFC_4
+   7. ROI#251  R2=0.0853  7Networks_RH_SomMot_20
+   8. ROI# 82  R2=0.0817  7Networks_LH_DorsAttn_Post_13
+   9. ROI# 18  R2=0.0795  7Networks_LH_Vis_16
+  10. ROI#  4  R2=0.0767  7Networks_LH_Vis_2
+
+=== Shared_all_R2 (top 10 ROIs) ===
+   1. ROI# 40  R2=0.0080  7Networks_LH_SomMot_7
