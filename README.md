@@ -36,4 +36,5 @@ The pipeline tracks the dynamic evolution of brain network connectivity over the
 | **6 — Null Network Validation** | Repeat VPA on auditory cortex ROIs (no auditory stimulation in task) as a negative control | [`codes/run_null_network_validation.py`](codes/run_null_network_validation.py) |
 | **7 — Anatomical Validation & Group Statistics** | Compare Unique VPA peaks against Smith et al. / Chein & Schneider anatomical predictions; extract Delta (total adaptation magnitude) and run hierarchical `3dttest++` group models | [`codes/run_group_statistics.py`](codes/run_group_statistics.py) |
 | **8A — Interactive 3D Visualization** | Interactive glass-brain HTML visualizations of group-level VPA maps | [`codes/run_interactive_html.py`](codes/run_interactive_html.py) |
+| **8B — Static Brain Renderings** | Glass-brain and orthogonal stat-map PNGs of group-level VPA maps via nilearn | [`codes/run_nilearn_render.py`](codes/run_nilearn_render.py) |
 
