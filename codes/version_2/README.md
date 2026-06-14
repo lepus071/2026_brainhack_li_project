@@ -38,13 +38,12 @@ end-to-end through Phase 7.
   from `ml_results/ROI_Labels_481.csv` (produced by `fix_roi_labels.py`, the
   correct 481-dimensional feature_col -> label mapping).
 - **Phase 7**: `run_group_statistics.py`
+- **`run_interactive_html.py`** (Phase 8A): interactive 3D glass-brain HTML
+  views of the group-level `nifti_axes_v2/VPA_Map_*_R2.nii.gz` maps, output to
+  `html_views_v2/`.
+- **`run_nilearn_render.py`** (Phase 8B): static glass-brain + orthogonal
+  stat-map PNGs of the same maps, output to `nilearn_renders_v2/`.
 - **`subjectlist.txt`**, **`license.txt`**: shared config/license files.
-
-## To do (Phase 8A/8B)
-
-Interactive HTML / SurfIce rendering has not yet been done for the v2 version.
-See `../version_1/run_interactive_html.py` and `run_nilearn_render.py` for
-reference — just change the input path to `nifti_axes_v2/`.
 
 ## Execution status: officially run ✅
 
