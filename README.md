@@ -43,7 +43,7 @@ plus follow-up analyses), built around the 2-variable ($x_f$, $x_s$) dual-rate m
 | **6 — Null Network Validation** | VPA on the Limbic network (26 ROIs, no expected motor-learning signal) as a negative control | [`run_null_network_validation.py`](codes/version_2/run_null_network_validation.py) |
 | **7 — Group Statistics** | Hierarchical `3dttest++` group models | [`run_group_statistics.py`](codes/version_2/run_group_statistics.py) |
 | **Follow-up — Marginal R² / Between-Within / Permutation** | Marginal R² for $x_f$/$x_s$ alone, between- vs. within-subject decomposition, and a permutation test on the between-subject correlations | [`run_marginal_r2_analysis.py`](codes/version_2/run_marginal_r2_analysis.py), [`run_between_within_decomposition.py`](codes/version_2/run_between_within_decomposition.py), [`run_between_subject_permutation.py`](codes/version_2/run_between_subject_permutation.py) |
-| **8A/8B — Visualization** | Interactive HTML / static glass-brain renderings — not yet implemented for this version (see [`version_1`](codes/version_1/) for reference scripts) | — |
+| **8A/8B — Visualization** | Interactive 3D glass-brain HTML views and static glass-brain/orthogonal PNG renderings of the group-level VPA maps | [`run_interactive_html.py`](codes/version_2/run_interactive_html.py), [`run_nilearn_render.py`](codes/version_2/run_nilearn_render.py) |
 
 See [`codes/version_2/README.md`](codes/version_2/README.md) for execution status and results.
 
