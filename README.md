@@ -7,6 +7,35 @@
 
 ---
 
+## TL;DR
+
+When you adapt to a visual rotation while reaching, your motor system relies on two
+processes that learn and forget at different speeds: a **fast** one ($x_f$) and a
+**slow** one ($x_s$) (Smith et al., 2006). This pipeline takes fMRI data from 10
+subjects performing a visuomotor rotation task, fits each subject's $x_f$/$x_s$
+trajectories from their behavior, and asks: **which brain regions' connectivity
+dynamics uniquely track the fast process, which track the slow process, and which
+track both?** It does so with a leakage-free nested cross-validation scheme
+(Leave-One-Subject-Out + GroupKFold) and a negative-control network to check the
+results aren't artifacts.
+
+- **Status**: Phases 0A-8B complete for N=10. Results are directional pilot
+  findings, not yet statistically significant at the whole-brain level — see
+  [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) for the honest
+  numbers.
+- **Where to start reading**: this README → [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md)
+  → [`codes/version_2/README.md`](codes/version_2/README.md) for execution details.
+
+## Documentation
+
+| Document | Purpose |
+|---|---|
+| [README.md](README.md) (this file) | Project overview, pipeline stages, dataset/task description, references |
+| [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) | **Main results report** (N=10): group-level VPA maps, anatomical localization, null-network validation, group statistics, and honest discussion of significance |
+| [Physiological_Mechanisms_Smith2006.md](docs/Physiological_Mechanisms_Smith2006.md) | Background reading on the physiological interpretation of the Smith et al. (2006) dual-rate model ($x_f$/$x_s$) |
+| [`codes/version_2/README.md`](codes/version_2/README.md) | Execution status and per-script notes for the current pipeline |
+| [`codes/version_2/requirements.txt`](codes/version_2/requirements.txt) | Python dependencies + non-pip external tools (Docker/Singularity, FreeSurfer license, AFNI) |
+
 ## Hybrid Dynamic Neural Decoding Pipeline
 
 An fMRI analysis pipeline for visuomotor rotation (VMR) adaptation tasks, based on
@@ -23,6 +52,24 @@ variance is uniquely explained by $x_f$ and $x_s$.
 **Atlas:** 482 ROIs total — 1 individualized M1 + 399 Schaefer 400 cortical parcels + 82 AAL3v2 subcortical/cerebellar regions.
 
 **Results:** see [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) (N=10 pilot report).
+
+## Environment
+
+Python dependencies are listed in [`codes/version_2/requirements.txt`](codes/version_2/requirements.txt)
+(`numpy`, `scipy`, `pandas`, `scikit-learn`, `nibabel`, `nilearn`, `pyriemann`, `matplotlib`).
+
+Phase 0A additionally requires:
+- Docker or Singularity, to run the fMRIPrep container
+- A FreeSurfer license file (`license.txt`) — get a free copy from [surfer.nmr.mgh.harvard.edu](https://surfer.nmr.mgh.harvard.edu/registration.html); do **not** commit this file
+- AFNI, for `3dDeconvolve` (Phase 1) and `3dttest++` (Phase 7)
+
+## Data
+
+Raw and derivative data are **not** committed to this repository (`data/` and `work/`
+are in `.gitignore`). Raw fMRI/behavioral data come from OpenNeuro dataset
+[ds005598](https://openneuro.org/datasets/ds005598); all derivatives (preprocessed
+images, features, VPA maps, figures used in reports) are regenerated locally by
+running the pipeline stages below.
 
 ## Main pipeline: `codes/version_2/`
 
