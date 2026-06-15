@@ -70,7 +70,7 @@ All three components localize to somatomotor cortex, cerebellum (lobules IV/V), 
 
 | Unique $x_f$ | Unique $x_s$ |
 |---|---|
-| ![Unique_xf](../figures/VPA_Map_Unique_xf_R2_OrthoView.png) | ![Unique_xs](../figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
+| ![Unique_xf](../figures/VPA_Map_Unique_xf_R2_GlassBrain.png) | ![Unique_xs](../figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
 
 | Shared $x_f$–$x_s$ | Full ($x_f$+$x_s$) |
 |---|---|
