@@ -69,6 +69,9 @@ python run_nilearn_render.py         # -> nilearn_renders_v2/*.png
 - **Phase 1**: `run_afni_condition_glm.py`, `run_group_M1_GLM.tcsh`
 - **Phase 2**: `build_combined_atlas.py`
 - **Phase 3**: `run_hybrid_riemannian_extraction.py`, `fix_roi_labels.py`
+  (dynamic FC is estimated with a high-density sliding window over the task
+  run: window size = 30 TR (= 60s at TR=2.0s), step = 1 TR, giving
+  `n_volumes - 29` overlapping windows per subject)
   (`fix_roi_labels.py` depends on the same `r01_scaled.nii.gz` + atlas as
   Phase 3, and produces `ml_results/ROI_Labels_481.csv`, used by the Phase 4
   follow-up analysis scripts to look up named ROIs)
