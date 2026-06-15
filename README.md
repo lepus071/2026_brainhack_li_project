@@ -33,6 +33,7 @@ results aren't artifacts.
 | [README.md](README.md) (this file) | Project overview, pipeline stages, dataset/task description, references |
 | [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) | **Main results report** (N=10): group-level VPA maps, anatomical localization, null-network validation, group statistics, and honest discussion of significance |
 | [Physiological_Mechanisms_Smith2006.md](docs/Physiological_Mechanisms_Smith2006.md) | Background reading on the physiological interpretation of the Smith et al. (2006) dual-rate model ($x_f$/$x_s$) |
+| [Riemannian_Manifold_Projection_Review.md](docs/Riemannian_Manifold_Projection_Review.md) | Methodological literature review: Riemannian tangent-space projection vs. Pearson/partial-correlation/ICA/GNN methods, with implementation guidelines and pitfalls |
 | [`codes/version_2/README.md`](codes/version_2/README.md) | Execution status and per-script notes for the current pipeline |
 | [`codes/version_2/requirements.txt`](codes/version_2/requirements.txt) | Python dependencies + non-pip external tools (Docker/Singularity, FreeSurfer license, AFNI) |
 
