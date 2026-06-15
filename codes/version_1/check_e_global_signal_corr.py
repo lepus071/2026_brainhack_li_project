@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr, ttest_1samp
 
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 AFNI_DIR = f'{PROJ_DIR}/data/derivatives/afni_fmriprep'
 FMRIPREP_DIR = f'{PROJ_DIR}/data/derivatives/fmriprep'

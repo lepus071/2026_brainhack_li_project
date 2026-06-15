@@ -16,7 +16,7 @@ import glob
 from nilearn import plotting
 import nibabel as nib
 
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 INPUT_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/nifti_axes'
 OUTPUT_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/html_views'
 os.makedirs(OUTPUT_DIR, exist_ok=True)

@@ -1,4 +1,4 @@
-# 2026_brainheck_li_project
+# 2026_brainhack_li_project
 <a href="https://github.com/lepus071"> 
   <img src="https://avatars.githubusercontent.com/u/232158763?v=4&s=100" width="100px;" alt=""/>
   <br />
@@ -140,8 +140,8 @@ This is a pilot-stage, not-yet-peer-reviewed analysis. If you use or build on th
 code, please cite this repository:
 
 ```
-Li, C.-Y. (2026). 2026_brainheck_li_project: Hybrid Dynamic Neural Decoding Pipeline
-[Computer software]. https://github.com/lepus071/2026_brainheck_li_project
+Li, C.-Y. (2026). 2026_brainhack_li_project: Hybrid Dynamic Neural Decoding Pipeline
+[Computer software]. https://github.com/lepus071/2026_brainhack_li_project
 ```
 
 Please also cite the underlying dataset (OpenNeuro [ds005598](https://openneuro.org/datasets/ds005598))

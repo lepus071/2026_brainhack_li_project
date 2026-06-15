@@ -19,7 +19,7 @@ import re
 import numpy as np
 import pandas as pd
 
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 ML_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/ml_results'
 ATLAS_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/atlases'
 

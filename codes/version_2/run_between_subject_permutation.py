@@ -28,7 +28,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_hybrid_group_decoding import load_and_align_data
 from run_between_within_decomposition import subject_means, load_roi_labels
 
-PROJ_DIR     = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR     = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 ATLAS_LABELS = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/atlases/Combined_Atlas_Labels.csv'
 N_PERM       = 10000

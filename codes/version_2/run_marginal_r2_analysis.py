@@ -30,7 +30,7 @@ from sklearn.preprocessing import StandardScaler
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_hybrid_group_decoding import load_and_align_data  # reuse Phase 4 (v2) data loading
 
-PROJ_DIR     = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR     = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 ROI_LABELS   = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/ml_results/ROI_Labels_481.csv'
 OUTPUT_DIR   = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/ml_results_v2'

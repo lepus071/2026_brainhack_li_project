@@ -11,9 +11,9 @@ from scipy.ndimage import gaussian_filter1d
 # ==========================================
 # 1. Parameter and path settings (Please check your CSV placement path)
 # ==========================================
-raw_data_path = r'/home/ser/2026_brainheck_li_project/data/derivatives/behavioral/day2_behavioral_data.csv' 
+raw_data_path = r'/home/ser/2026_brainhack_li_project/data/derivatives/behavioral/day2_behavioral_data.csv' 
 # Note that sub-* here is just a string template, we will dynamically replace it via .replace('sub-*', sub_id) in the loop to generate directories
-output_base_dir_template = r'/home/ser/2026_brainheck_li_project/data/derivatives/behavioral_features/sub-*'
+output_base_dir_template = r'/home/ser/2026_brainhack_li_project/data/derivatives/behavioral_features/sub-*'
 
 # [Smart Patch] Automatically fix cross-system issues
 if os.name == 'nt':  # If it is a Windows system (PsychoPy)

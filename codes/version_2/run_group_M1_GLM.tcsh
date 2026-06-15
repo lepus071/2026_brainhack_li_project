@@ -11,7 +11,7 @@
 # ==============================================================================
 
 # Set paths
-set proj_dir = "/home/ser/2026_brainheck_li_project"
+set proj_dir = "/home/ser/2026_brainhack_li_project"
 set afni_dir = "${proj_dir}/data/derivatives/afni_fmriprep"
 set output_dir = "${proj_dir}/data/derivatives/group_stats_phase1"
 

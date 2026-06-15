@@ -22,7 +22,7 @@ from sklearn.metrics import r2_score
 from sklearn.linear_model import RidgeCV
 from sklearn.preprocessing import StandardScaler
 
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 FEATURE_DIR  = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/features'
 ATLAS_DIR    = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/atlases'

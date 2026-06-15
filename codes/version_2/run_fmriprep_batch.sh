@@ -15,20 +15,20 @@
 # -- 1. Path and license settings (please modify according to your actual computer situation) ----------------------
 
 # Root directory of BIDS folder
-BIDS_DIR="/home/ser/2026_brainheck_li_project/data"
+BIDS_DIR="/home/ser/2026_brainhack_li_project/data"
 
 # Target output folder for fMRIPrep
 DERIVS_DIR="${BIDS_DIR}/derivatives"
 
 # Absolute path to FreeSurfer License file (Please verify this path is correct!)
 # If you have not applied yet, please apply at https://surfer.nmr.mgh.harvard.edu/registration.html
-FS_LICENSE="/home/ser/2026_brainheck_li_project/codes/license.txt"
+FS_LICENSE="/home/ser/2026_brainhack_li_project/codes/license.txt"
 
 # Subject list file
-SUBJ_LIST="/home/ser/2026_brainheck_li_project/codes/subjectlist.txt"
+SUBJ_LIST="/home/ser/2026_brainhack_li_project/codes/subjectlist.txt"
 
 # fMRIPrep working cache directory (for resume on interruption, very important!)
-WORK_DIR="/home/ser/2026_brainheck_li_project/work"
+WORK_DIR="/home/ser/2026_brainhack_li_project/work"
 
 # Computer resource allocation
 NTHREADS=2       # Extreme downscaling: only allow 2 cores to completely prevent ICA-AROMA simultaneous bursts

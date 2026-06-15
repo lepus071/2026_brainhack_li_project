@@ -18,7 +18,7 @@ import os
 import pandas as pd
 from nilearn.maskers import NiftiLabelsMasker
 
-PROJ_DIR     = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR     = '/home/ser/2026_brainhack_li_project'
 ATLAS_DIR    = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/atlases'
 AFNI_DIR     = f'{PROJ_DIR}/data/derivatives/afni_fmriprep'
 OUTPUT_DIR   = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/ml_results'

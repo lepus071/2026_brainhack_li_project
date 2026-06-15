@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_hybrid_group_decoding import load_and_align_data
 from run_marginal_r2_analysis import detrend_per_subject
 
-PROJ_DIR     = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR     = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 PRED_NAMES   = ['e', 'xf', 'xs']
 

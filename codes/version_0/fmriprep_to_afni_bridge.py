@@ -34,7 +34,7 @@ SPACE = 'MNI152NLin6Asym'
 FD_THRESHOLD = 0.5
 
 # -- Path settings -----------------------------------------------------------------
-PROJ_DIR    = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR    = '/home/ser/2026_brainhack_li_project'
 FMRIPREP_DIR = f'{PROJ_DIR}/data/derivatives/fmriprep'
 OUT_BASE    = f'{PROJ_DIR}/data/derivatives/afni_fmriprep'
 SESSION     = 'ses-02'

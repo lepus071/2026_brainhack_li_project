@@ -24,7 +24,7 @@ from nilearn.maskers import NiftiLabelsMasker
 from sklearn.covariance import LedoitWolf
 from pyriemann.utils.base import invsqrtm, logm
 
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 AFNI_DIR = f'{PROJ_DIR}/data/derivatives/afni_fmriprep'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 COMBINED_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/atlases'

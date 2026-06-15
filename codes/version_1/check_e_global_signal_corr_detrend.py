@@ -24,7 +24,7 @@ import pandas as pd
 from scipy.stats import pearsonr, ttest_1samp
 from scipy.signal import detrend
 
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 FMRIPREP_DIR = f'{PROJ_DIR}/data/derivatives/fmriprep'
 

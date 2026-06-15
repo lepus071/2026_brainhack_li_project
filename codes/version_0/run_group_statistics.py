@@ -34,7 +34,7 @@ import os
 import pandas as pd
 import numpy as np
 
-PROJ_DIR     = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR     = '/home/ser/2026_brainhack_li_project'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 AFNI_DIR     = f'{PROJ_DIR}/data/derivatives/afni_fmriprep'
 OUTPUT_DIR   = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/nifti_axes'

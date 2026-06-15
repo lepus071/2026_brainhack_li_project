@@ -21,7 +21,7 @@ import pandas as pd
 from nilearn import datasets, image
 
 # -- 1. Path and parameter settings ----------------------------------------------------------
-PROJ_DIR = '/home/ser/2026_brainheck_li_project'
+PROJ_DIR = '/home/ser/2026_brainhack_li_project'
 AFNI_DIR = f'{PROJ_DIR}/data/derivatives/afni_fmriprep'
 SUBJECT_LIST = f'{PROJ_DIR}/codes/subjectlist.txt'
 RADIUS = 6.0  # mm
