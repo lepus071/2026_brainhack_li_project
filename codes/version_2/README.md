@@ -116,7 +116,7 @@ Phase 4-8B have been rerun in the official pipeline:
 - Phase 7 (`run_group_statistics.py`): has been run (`3dttest++` group models
   on the per-subject VPA maps). At N=10, no voxel/ROI survives correction —
   consistent with the Section 6 permutation-test result in
-  `Pilot_Results_Public_v2.md`. Treat as exploratory/candidate output only,
+  `../../docs/Pilot_Results_Public_v2.md`. Treat as exploratory/candidate output only,
   not as a statistically validated group result.
 - Phase 8A/8B -> `html_views_v2/` (interactive HTML) and
   `nilearn_renders_v2/` (glass-brain + ortho PNG), generated from the
@@ -155,7 +155,7 @@ The official output is in `ml_results_v2/`, with names that don't have the
 
 `../version_1/` fully preserves the previously attempted 3-variable
 (e, x_f, x_s) + Chein & Schneider three-system route. The reasons for
-dropping it are described in `Pilot_Results_Public_v2.md`'s appendix:
+dropping it are described in `../../docs/Pilot_Results_Public_v2.md`'s appendix:
 (1) e is severely collinear with x_f mathematically, and (2) the Meta system
 anatomically overlaps with the Con system under the Schaefer atlas and cannot
 be independently verified.

@@ -70,11 +70,11 @@ All three components localize to somatomotor cortex, cerebellum (lobules IV/V), 
 
 | Unique $x_f$ | Unique $x_s$ |
 |---|---|
-| ![Unique_xf](figures/VPA_Map_Unique_xf_R2_OrthoView.png) | ![Unique_xs](figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
+| ![Unique_xf](../figures/VPA_Map_Unique_xf_R2_OrthoView.png) | ![Unique_xs](../figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
 
 | Shared $x_f$–$x_s$ | Full ($x_f$+$x_s$) |
 |---|---|
-| ![Shared_xf_xs](figures/VPA_Map_Shared_xf_xs_R2_OrthoView.png) | ![Full_xf_xs](figures/VPA_Map_Full_xf_xs_R2_OrthoView.png) |
+| ![Shared_xf_xs](../figures/VPA_Map_Shared_xf_xs_R2_OrthoView.png) | ![Full_xf_xs](../figures/VPA_Map_Full_xf_xs_R2_OrthoView.png) |
 
 Note on cut-plane selection: the orthogonal slice positions above are chosen automatically by nilearn (`plot_stat_map`'s default `cut_coords`, based on the largest suprathreshold cluster's center of mass), not the single peak-R² voxel reported in the tables above — so a given slice may not visibly pass through the exact top-ROI peak.
 
@@ -86,7 +86,7 @@ Interactive 3D versions of these maps (Phase 8A) can be generated locally via `c
 
 ## 5. Summary vs. theoretical predictions (Smith et al. 2006)
 
-**Hypothesized physiological substrate (why M1 / cerebellum / substantia nigra):** Smith et al. (2006), drawing on cerebellar eyeblink-conditioning work (Medina et al. 2001), proposed that the fast process ($x_f$) corresponds to cerebellar-cortex plasticity (parallel-fiber → Purkinje cell LTD, driven by climbing-fiber error signals), while the slow process ($x_s$) corresponds to a more persistent locus downstream — the deep cerebellar nuclei — that gradually consolidates the trained response (consistent with savings/long-term retention). Follow-up electrophysiology (Yang & Lisberger 2014) supports this cortex-vs-nuclei dissociation, and later work additionally implicates M1 and downstream motor output for fast online corrections (Galea et al. 2011) and dopaminergic/basal-ganglia circuits (substantia nigra) in slow, reward-based consolidation (Choi et al. 2014). This pipeline's anatomical predictions (M1 for $x_f$; cerebellar vermis/deep nuclei and substantia nigra for $x_s$) follow directly from this literature. For a fuller treatment — including alternative hypotheses (e.g., explicit/implicit dissociation, M1/parietal vs. cerebellar accounts) and caveats about the strength of these physiological inferences — see [`docs/Physiological_Mechanisms_Smith2006.md`](docs/Physiological_Mechanisms_Smith2006.md).
+**Hypothesized physiological substrate (why M1 / cerebellum / substantia nigra):** Smith et al. (2006), drawing on cerebellar eyeblink-conditioning work (Medina et al. 2001), proposed that the fast process ($x_f$) corresponds to cerebellar-cortex plasticity (parallel-fiber → Purkinje cell LTD, driven by climbing-fiber error signals), while the slow process ($x_s$) corresponds to a more persistent locus downstream — the deep cerebellar nuclei — that gradually consolidates the trained response (consistent with savings/long-term retention). Follow-up electrophysiology (Yang & Lisberger 2014) supports this cortex-vs-nuclei dissociation, and later work additionally implicates M1 and downstream motor output for fast online corrections (Galea et al. 2011) and dopaminergic/basal-ganglia circuits (substantia nigra) in slow, reward-based consolidation (Choi et al. 2014). This pipeline's anatomical predictions (M1 for $x_f$; cerebellar vermis/deep nuclei and substantia nigra for $x_s$) follow directly from this literature. For a fuller treatment — including alternative hypotheses (e.g., explicit/implicit dissociation, M1/parietal vs. cerebellar accounts) and caveats about the strength of these physiological inferences — see [`Physiological_Mechanisms_Smith2006.md`](Physiological_Mechanisms_Smith2006.md).
 
 | Prediction | Observation | Verdict |
 |---|---|---|

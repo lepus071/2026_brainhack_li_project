@@ -12,6 +12,6 @@ This directory contains three versions of the analysis pipeline:
 - **[`version_1/`](version_1/) — exploratory 3-variable attempt (archived).**
   Adds the error signal $e$ and a Chein & Schneider (2012) interpretation.
   **Not adopted** for the main analysis — see the appendix of
-  [`../Pilot_Results_Public_v2.md`](../Pilot_Results_Public_v2.md) for why.
+  [`../docs/Pilot_Results_Public_v2.md`](../docs/Pilot_Results_Public_v2.md) for why.
 
 See the [root README](../README.md) for the full project overview and results.

@@ -22,7 +22,7 @@ variance is uniquely explained by $x_f$ and $x_s$.
 
 **Atlas:** 482 ROIs total — 1 individualized M1 + 399 Schaefer 400 cortical parcels + 82 AAL3v2 subcortical/cerebellar regions.
 
-**Results:** see [Pilot_Results_Public_v2.md](Pilot_Results_Public_v2.md) (N=10 pilot report).
+**Results:** see [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) (N=10 pilot report).
 
 ## Main pipeline: `codes/version_2/`
 
@@ -69,7 +69,7 @@ This pipeline uses OpenNeuro dataset [ds005598](https://openneuro.org/datasets/d
 - **Phase 6 — Null Network Validation**: A core question for any decoding pipeline is "could this just be a global artifact?" Re-running the VPA on the Limbic network — which has no expected motor-learning signal in this task — and finding R²≈0 is the negative control that establishes spatial specificity of the main findings.
 - **Phase 7 — Group Statistics**: Aggregates subject-level results into hierarchical group-level statistical models (`3dttest++`), enabling population-level inference rather than single-subject anecdote.
 - **Follow-up analyses (Marginal R² / Between-Within / Permutation)**: Because $x_f$ and $x_s$ are themselves correlated, these scripts further decompose each predictor's marginal contribution into between-subject vs. within-subject variance, and run a permutation test to assess whether the observed between-subject correlations exceed what's expected by chance at N=10.
-- **Phase 8A/8B — Visualization**: Produces interactive (HTML) and static (PNG) brain renderings of the group-level VPA maps, used for both exploration and reporting (see [Pilot_Results_Public_v2.md](Pilot_Results_Public_v2.md)).
+- **Phase 8A/8B — Visualization**: Produces interactive (HTML) and static (PNG) brain renderings of the group-level VPA maps, used for both exploration and reporting (see [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md)).
 
 ### Key references
 
@@ -85,4 +85,4 @@ This pipeline uses OpenNeuro dataset [ds005598](https://openneuro.org/datasets/d
 - [`codes/version_1/`](codes/version_1/) — an exploratory 3-variable model adding a prediction-error
   signal $e$ and a Chein & Schneider (2012) Triarchic Theory interpretation
   (Meta/Con/Rep systems). **Not adopted** for the main analysis — see the appendix
-  of [Pilot_Results_Public_v2.md](Pilot_Results_Public_v2.md) for why. Kept for reference.
+  of [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) for why. Kept for reference.
