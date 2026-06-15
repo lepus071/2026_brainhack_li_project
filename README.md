@@ -133,3 +133,26 @@ This pipeline uses OpenNeuro dataset [ds005598](https://openneuro.org/datasets/d
   signal $e$ and a Chein & Schneider (2012) Triarchic Theory interpretation
   (Meta/Con/Rep systems). **Not adopted** for the main analysis — see the appendix
   of [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) for why. Kept for reference.
+
+## Citation
+
+This is a pilot-stage, not-yet-peer-reviewed analysis. If you use or build on this
+code, please cite this repository:
+
+```
+Li, C.-Y. (2026). 2026_brainheck_li_project: Hybrid Dynamic Neural Decoding Pipeline
+[Computer software]. https://github.com/lepus071/2026_brainheck_li_project
+```
+
+Please also cite the underlying dataset (OpenNeuro [ds005598](https://openneuro.org/datasets/ds005598))
+and the key methodological references listed above (Smith et al. 2006; Pennec et al.
+2006; Varoquaux et al. 2010; Schaefer et al. 2018; Rolls et al. 2020) as appropriate.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) — you are free to use,
+modify, and distribute this code (including for commercial purposes), provided the
+copyright notice and license text are retained. The data and figures referenced
+in [Pilot_Results_Public_v2.md](docs/Pilot_Results_Public_v2.md) are derived from
+OpenNeuro dataset [ds005598](https://openneuro.org/datasets/ds005598), which has its
+own license terms on OpenNeuro.
