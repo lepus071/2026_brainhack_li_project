@@ -13,6 +13,55 @@ scripts and utilities have been copied here from the `codes/` parent directory
 depend on `../version_1/` or any file in the parent directory, and can be run
 end-to-end through Phase 8B.
 
+## Environment
+
+Python dependencies are listed in [`requirements.txt`](requirements.txt)
+(numpy, scipy, pandas, scikit-learn, nibabel, nilearn, pyriemann,
+matplotlib) — install with `pip install -r requirements.txt`.
+
+In addition to the Python environment, two external neuroimaging tools are
+required for specific phases (not installable via pip):
+- **fMRIPrep** (Phase 0A) — run via its official Docker/Singularity container.
+- **AFNI** (Phases 1 and 7) — provides `3dDeconvolve`, `3dttest++`, and the
+  `tcsh` runtime used by `run_group_M1_GLM.tcsh`.
+
+## How to run (example commands)
+
+Each phase's script reads the previous phase's output from
+`data/derivatives/riemannian_decoding/` (paths are hardcoded at the top of
+each script via a `PROJ_DIR` variable — edit this to your local project
+root before running). Example invocation order, after Phase 0A/0B/1/2 have
+produced their inputs:
+
+```bash
+cd codes/version_2
+
+# Phase 3: Riemannian projection + dynamic FC -> ml_results_v2/*.npy
+python run_hybrid_riemannian_extraction.py
+python fix_roi_labels.py            # produces ml_results/ROI_Labels_481.csv
+
+# Phase 4: nested LOSO + GroupKFold RidgeCV VPA
+python run_hybrid_group_decoding.py
+
+# Phase 5: project VPA vectors back to NIfTI volumes
+python run_inverse_vpa_mapping.py
+
+# Phase 6: Limbic-network negative control
+python run_null_network_validation.py
+
+# Follow-up analyses
+python run_marginal_r2_analysis.py
+python run_between_within_decomposition.py
+python run_between_subject_permutation.py
+
+# Phase 7: group-level statistics (requires AFNI's 3dttest++)
+python run_group_statistics.py
+
+# Phase 8A/8B: visualization
+python run_interactive_html.py       # -> html_views_v2/*.html
+python run_nilearn_render.py         # -> nilearn_renders_v2/*.png
+```
+
 ## Files (in Phase order)
 
 - **Phase 0A**: `run_fmriprep_batch.sh`, `fmriprep_to_afni_bridge.py`
