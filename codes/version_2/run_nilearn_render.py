@@ -21,6 +21,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 THRESHOLD = 0.01
 VMAX = 0.5
+CMAP = 'Reds'  # sequential (one-directional) colormap: R2 is non-negative,
+               # so a diverging red/blue map is misleading.
 
 def main():
     print("\n========================================================")
@@ -43,13 +45,13 @@ def main():
         print(f"  > Rendering {basename}...")
 
         plotting.plot_glass_brain(
-            nii_file, threshold=THRESHOLD, vmax=VMAX,
+            nii_file, threshold=THRESHOLD, vmax=VMAX, cmap=CMAP,
             colorbar=True, plot_abs=False,
             title=basename, output_file=glass_out,
         )
 
         plotting.plot_stat_map(
-            nii_file, threshold=THRESHOLD, vmax=VMAX,
+            nii_file, threshold=THRESHOLD, vmax=VMAX, cmap=CMAP,
             display_mode='ortho',
             title=basename, output_file=ortho_out,
         )

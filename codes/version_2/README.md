@@ -11,7 +11,7 @@ This folder is now a **fully self-contained pipeline**: the Phase 0A-3, 7
 scripts and utilities have been copied here from the `codes/` parent directory
 (same content, following the shared-pipeline naming convention). It does not
 depend on `../version_1/` or any file in the parent directory, and can be run
-end-to-end through Phase 7.
+end-to-end through Phase 8B.
 
 ## Files (in Phase order)
 

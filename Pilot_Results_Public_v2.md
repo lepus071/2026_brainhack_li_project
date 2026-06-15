@@ -1,6 +1,6 @@
 # Pilot Results: Hybrid Dynamic Neural Decoding Pipeline (N=10)
 
-*Last updated: 2026-06-12*
+*Last updated: 2026-06-15*
 
 This page summarizes pilot-phase results from the [Hybrid Dynamic Neural Decoding Pipeline](README.md). The primary analysis is anchored on Smith et al. (2006)'s **dual-rate motor learning model** ($x_f$, $x_s$), mapping these two behavioral state variables onto whole-brain dynamic connectivity. An earlier exploratory direction — adding a third "error" signal $e$ and a Chein & Schneider (2012) Triarchic Theory interpretation — was evaluated and **not adopted** for the main analysis (see Appendix).
 
@@ -75,6 +75,8 @@ All three components localize to somatomotor cortex, cerebellum (lobules IV/V), 
 | Shared $x_f$–$x_s$ | Full ($x_f$+$x_s$) |
 |---|---|
 | ![Shared_xf_xs](figures/VPA_Map_Shared_xf_xs_R2_OrthoView.png) | ![Full_xf_xs](figures/VPA_Map_Full_xf_xs_R2_OrthoView.png) |
+
+Note on cut-plane selection: the orthogonal slice positions above are chosen automatically by nilearn (`plot_stat_map`'s default `cut_coords`, based on the largest suprathreshold cluster's center of mass), not the single peak-R² voxel reported in the tables above — so a given slice may not visibly pass through the exact top-ROI peak.
 
 Note on Full vs. Shared: **Full $x_f$+$x_s$** is the total variance explained by both predictors together (≈ Unique $x_f$ + Unique $x_s$ + Shared); **Shared $x_f$–$x_s$** is only the overlapping portion — variance that either predictor could explain on its own, attributable to neither uniquely. Full closely resembles Unique $x_f$ here because $x_f$ dominates the joint model, while the Shared map is more spatially distributed across bilateral somatomotor cortex.
 

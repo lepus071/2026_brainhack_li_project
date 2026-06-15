@@ -19,7 +19,8 @@ INPUT_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/nifti_axes_v2'
 OUTPUT_DIR = f'{PROJ_DIR}/data/derivatives/riemannian_decoding/html_views_v2'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-CMAP = 'hot'
+CMAP = 'Reds'  # sequential (one-directional) colormap: R2 is non-negative,
+               # so a diverging red/blue map is misleading.
 THRESHOLD = 0.01
 
 def main():

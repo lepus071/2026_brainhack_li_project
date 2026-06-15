@@ -26,7 +26,7 @@ variance is uniquely explained by $x_f$ and $x_s$.
 
 ## Main pipeline: `codes/version_2/`
 
-[`codes/version_2/`](codes/version_2/) is the current, self-contained pipeline (Phase 0A-7
+[`codes/version_2/`](codes/version_2/) is the current, self-contained pipeline (Phase 0A-8
 plus follow-up analyses), built around the 2-variable ($x_f$, $x_s$) dual-rate model.
 
 ### Pipeline Stages & Corresponding Code
