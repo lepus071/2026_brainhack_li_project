@@ -70,11 +70,11 @@ All three components localize to somatomotor cortex, cerebellum (lobules IV/V), 
 
 | Unique $x_f$ | Unique $x_s$ |
 |---|---|
-| ![Unique_xf](../figures/VPA_Map_Unique_xf_R2_GlassBrain.png) | ![Unique_xs](../figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
+| ![Unique_xf](figures/VPA_Map_Unique_xf_R2_GlassBrain.png) | ![Unique_xs](figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
 
 | Shared $x_f$–$x_s$ | Full ($x_f$+$x_s$) |
 |---|---|
-| ![Shared_xf_xs](../figures/VPA_Map_Shared_xf_xs_R2_OrthoView.png) | ![Full_xf_xs](../figures/VPA_Map_Full_xf_xs_R2_OrthoView.png) |
+| ![Shared_xf_xs](figures/VPA_Map_Shared_xf_xs_R2_OrthoView.png) | ![Full_xf_xs](figures/VPA_Map_Full_xf_xs_R2_OrthoView.png) |
 
 Note on cut-plane selection: the orthogonal slice positions above are chosen automatically by nilearn (`plot_stat_map`'s default `cut_coords`, based on the largest suprathreshold cluster's center of mass), not the single peak-R² voxel reported in the tables above — so a given slice may not visibly pass through the exact top-ROI peak.
 
