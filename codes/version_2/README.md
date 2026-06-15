@@ -19,9 +19,16 @@ Python dependencies are listed in [`requirements.txt`](requirements.txt)
 (numpy, scipy, pandas, scikit-learn, nibabel, nilearn, pyriemann,
 matplotlib) — install with `pip install -r requirements.txt`.
 
-In addition to the Python environment, two external neuroimaging tools are
-required for specific phases (not installable via pip):
-- **fMRIPrep** (Phase 0A) — run via its official Docker/Singularity container.
+In addition to the Python environment, the following external (non-pip)
+dependencies are required for specific phases:
+- **Docker** or **Singularity** (Phase 0A) — used to run the fMRIPrep
+  container.
+- **fMRIPrep** (Phase 0A) — run via the Docker/Singularity container above.
+  fMRIPrep's internal FreeSurfer steps require a personal **FreeSurfer
+  license file** (`license.txt`), free from
+  https://surfer.nmr.mgh.harvard.edu/registration.html. Place your own copy
+  where `run_fmriprep_batch.sh` expects it — **do not commit this file**, as
+  it contains your registered email and license key.
 - **AFNI** (Phases 1 and 7) — provides `3dDeconvolve`, `3dttest++`, and the
   `tcsh` runtime used by `run_group_M1_GLM.tcsh`.
 

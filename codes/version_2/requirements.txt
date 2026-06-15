@@ -1,3 +1,11 @@
+# Non-pip external dependencies (see README "Environment" section):
+#   - Docker or Singularity, to run the fMRIPrep container (Phase 0A)
+#   - A FreeSurfer license file (license.txt), required by fMRIPrep's
+#     internal FreeSurfer steps -- obtain your own free copy from
+#     https://surfer.nmr.mgh.harvard.edu/registration.html and place it
+#     where run_fmriprep_batch.sh expects it. Do NOT commit this file.
+#   - AFNI, for 3dDeconvolve / 3dttest++ (Phases 1 and 7)
+
 numpy
 scipy
 pandas
