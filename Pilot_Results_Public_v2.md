@@ -86,6 +86,8 @@ Interactive 3D versions of these maps (Phase 8A) can be generated locally via `c
 
 ## 5. Summary vs. theoretical predictions (Smith et al. 2006)
 
+**Hypothesized physiological substrate (why M1 / cerebellum / substantia nigra):** Smith et al. (2006), drawing on cerebellar eyeblink-conditioning work (Medina et al. 2001), proposed that the fast process ($x_f$) corresponds to cerebellar-cortex plasticity (parallel-fiber → Purkinje cell LTD, driven by climbing-fiber error signals), while the slow process ($x_s$) corresponds to a more persistent locus downstream — the deep cerebellar nuclei — that gradually consolidates the trained response (consistent with savings/long-term retention). Follow-up electrophysiology (Yang & Lisberger 2014) supports this cortex-vs-nuclei dissociation, and later work additionally implicates M1 and downstream motor output for fast online corrections (Galea et al. 2011) and dopaminergic/basal-ganglia circuits (substantia nigra) in slow, reward-based consolidation (Choi et al. 2014). This pipeline's anatomical predictions (M1 for $x_f$; cerebellar vermis/deep nuclei and substantia nigra for $x_s$) follow directly from this literature.
+
 | Prediction | Observation | Verdict |
 |---|---|---|
 | $x_f$ (fast) and $x_s$ (slow) processes have distinct but partially overlapping neural substrates, localizing to M1/cerebellum | Unique $x_f$/Unique $x_s$ top hits differ (SomMot_33 vs Vis_9); Shared $x_f$–$x_s$ shows overlap (SomMot_24, Cerebellum_4_5_L) | ⚠️ Directionally consistent; not significant (see Section 6) |

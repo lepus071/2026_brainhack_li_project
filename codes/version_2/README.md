@@ -47,13 +47,21 @@ end-to-end through Phase 8B.
 
 ## Execution status: officially run ✅
 
-Phase 4-6 have been rerun in the official pipeline:
+Phase 4-8B have been rerun in the official pipeline:
 - Phase 4 -> `data/derivatives/riemannian_decoding/ml_results_v2/`: 4
   group-level `.npy` + 40 individual-level `.npy` (10 subjects x 4 components).
 - Phase 5 -> `data/derivatives/riemannian_decoding/nifti_axes_v2/`: 44
   `VPA_Map_*.nii.gz` files.
 - Phase 6: **4/4 PASS** — Limbic network (26 ROIs) mean/max R² is 0.0000 for
   `Unique_xf`, `Unique_xs`, `Shared_xf_xs`, and `Full_xf_xs`.
+- Phase 7 (`run_group_statistics.py`): has been run (`3dttest++` group models
+  on the per-subject VPA maps). At N=10, no voxel/ROI survives correction —
+  consistent with the Section 6 permutation-test result in
+  `Pilot_Results_Public_v2.md`. Treat as exploratory/candidate output only,
+  not as a statistically validated group result.
+- Phase 8A/8B -> `html_views_v2/` (interactive HTML) and
+  `nilearn_renders_v2/` (glass-brain + ortho PNG), generated from the
+  group-level `nifti_axes_v2/VPA_Map_*_R2.nii.gz` maps.
 
 ## `results/` (exploration-stage reference values, for cross-checking against the official group-level results)
 
