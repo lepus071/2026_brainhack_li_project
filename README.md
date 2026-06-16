@@ -7,7 +7,7 @@
 
 ---
 
-## TL;DR
+## Summary
 
 When you adapt to a visual rotation while reaching, your motor system relies on two
 processes that learn and forget at different speeds: a **fast** one ($x_f$) and a
