@@ -50,6 +50,8 @@ variance is uniquely explained by $x_f$ and $x_s$.
 
 **Dataset:** OpenNeuro [ds005598](https://openneuro.org/datasets/ds005598) — right-handed VMR task with a 45° cursor rotation block (no washout), preceded by a resting-state scan.
 
+![Task example](docs/figures/task%20example.png)
+
 **Atlas:** Three-layer hybrid parcellation (482 ROIs total):
 
 | Layer | Atlas | ROIs | Rationale |
