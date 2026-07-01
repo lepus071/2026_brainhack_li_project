@@ -69,7 +69,7 @@ variance is uniquely explained by $x_f$ and $x_s$.
 
 | Unique $x_f$ (fast process) | Unique $x_s$ (slow process) |
 |:---------------------------:|:---------------------------:|
-| ![Unique_xf](docs/figures/VPA_Map_Unique_xf_R2_GlassBrain.png) | ![Unique_xs](docs/figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
+| ![Unique_xf](docs/figures/VPA_Map_Unique_xf_R2_OrthoView.png) | ![Unique_xs](docs/figures/VPA_Map_Unique_xs_R2_OrthoView.png) |
 
 | Shared $x_f$–$x_s$ | Full model ($x_f + x_s$) |
 |:-------------------:|:------------------------:|
