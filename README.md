@@ -135,21 +135,37 @@ This pipeline uses OpenNeuro dataset [ds005598](https://openneuro.org/datasets/d
 
 ```mermaid
 flowchart TD
-    A["0A — fMRI Preprocessing\nfMRIPrep + FreeSurfer"] --> C["1 — Individualized M1 Localization"]
-    A --> E
-    B["0B — Behavioral Modeling\nDual-rate fit → xf / xs"] --> G
-    C --> D["2 — Multi-Atlas Node Construction\n482 ROIs: Schaefer 400 + AAL3v2 + M1"]
-    D --> E["3A — Riemannian Manifold Projection\nResting-state covariance → per-subject SPD reference"]
+    A["0A — fMRI Preprocessing\nfMRIPrep + FreeSurfer"]
+    B["0B — Behavioral Modeling\nDual-rate fit → xf / xs"]
+    C["1 — Individualized M1 Localization"]
+    D["2 — Multi-Atlas Node Construction\n482 ROIs: Schaefer 400 + AAL3v2 + M1"]
+    E["3A — Riemannian Manifold Projection\nResting-state covariance → SPD reference"]
+    F["3B — Sliding-Window Dynamic FC\n30 TR · 1 TR step · Ledoit-Wolf"]
+    G["4 — HRF Alignment + VPA\nUnique xf · Unique xs · Shared"]
+    H["5 — Inverse VPA Mapping\nROI vectors → NIfTI"]
+    I["6 — Null Network Validation\nLimbic ✅"]
+    J["7 — Group Statistics\n3dttest++"]
+    K["8A/8B — Visualization"]
+    L["Follow-up\nMarginal R² · Between/Within · Permutation"]
+
+    A -. resting fMRI .-> E
+    A -- task fMRI --> C
+    A -- task fMRI --> F
+    B == xf / xs ==> G
+    C --> D
+    D --> E
     D --> H
-    E --> F["3B — Sliding-Window Dynamic FC\n30 TR window · 1 TR step · Ledoit-Wolf"]
-    F --> G["4 — HRF Alignment + VPA\nUnique xf · Unique xs · Shared"]
-    G --> H["5 — Inverse VPA Mapping\nROI vectors → NIfTI"]
-    G --> I["6 — Null Network Validation\nLimbic negative control ✅"]
-    G --> L["Follow-up\nMarginal R² · Between/Within · Permutation"]
-    H --> J["7 — Group Statistics\n3dttest++"]
-    H --> K["8A/8B — Visualization"]
+    E --> F
+    F --> G
+    G --> H
+    G --> I
+    G --> L
+    H --> J
+    H --> K
     J --> K
 ```
+
+> **Line style legend** — dashed `·····`: resting fMRI &nbsp;|&nbsp; solid `——`: task fMRI / pipeline flow &nbsp;|&nbsp; thick `═══`: behavioral xf / xs
 
 ### What each stage is for
 
