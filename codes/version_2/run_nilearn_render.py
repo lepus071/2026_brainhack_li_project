@@ -36,6 +36,14 @@ def main():
 
     print(f"[INFO] Found {len(vpa_files)} VPA maps. Rendering...")
 
+    # Per-map cut_coords overrides (MNI x, y, z).
+    # Default None = nilearn auto-selects based on largest cluster centroid.
+    # Shared map: largest cluster is SomMot_24 (cortex), but Cerebellum_4_5_L
+    # is a key result — pin the axial cut to z=-22 to show both.
+    CUT_COORDS_OVERRIDES = {
+        'VPA_Map_Shared_xf_xs_R2': (-15, -55, -22),
+    }
+
     for nii_file in vpa_files:
         basename = os.path.basename(nii_file).replace('.nii.gz', '')
 
@@ -50,9 +58,10 @@ def main():
             title=basename, output_file=glass_out,
         )
 
+        cut_coords = CUT_COORDS_OVERRIDES.get(basename, None)
         plotting.plot_stat_map(
             nii_file, threshold=THRESHOLD, vmax=VMAX, cmap=CMAP,
-            display_mode='ortho',
+            display_mode='ortho', cut_coords=cut_coords,
             title=basename, output_file=ortho_out,
         )
 
