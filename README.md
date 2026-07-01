@@ -152,17 +152,16 @@ flowchart TD
     A -- task fMRI --> C
     A -- task fMRI --> F
     B == xf / xs ==> G
-    C --> D
-    D --> E
-    D --> H
-    E --> F
-    F --> G
-    G --> H
-    G --> I
-    G --> L
-    H --> J
-    H --> K
-    J --> K
+    C -- M1 mask per subject --> D
+    D -- 482-ROI atlas --> E
+    E -- resting-state SPD reference --> F
+    F -- tangent-space FC vectors\n481 ROIs × time --> G
+    G -- R² vectors\n481 ROIs × 3 components --> H
+    G -- R² vectors\nLimbic 26 ROIs --> I
+    G -- R² + predictions --> L
+    H -- whole-brain NIfTI R² maps --> J
+    H -- whole-brain NIfTI R² maps --> K
+    J -- group stat maps --> K
 ```
 
 > **Line style legend** — dashed `·····`: resting fMRI &nbsp;|&nbsp; solid `——`: task fMRI / pipeline flow &nbsp;|&nbsp; thick `═══`: behavioral xf / xs
