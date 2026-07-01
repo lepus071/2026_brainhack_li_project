@@ -104,7 +104,7 @@ plus follow-up analyses), built around the 2-variable ($x_f$, $x_s$) dual-rate m
 
 | Stage | Description | Script(s) |
 |:------|:------------|:----------|
-| **0A — fMRI Preprocessing** | fMRIPrep (motion correction, co-registration, normalization to MNI); convert to Percent Signal Change, generate censoring masks and motion regressors | [`run_fmriprep_batch.sh`](codes/version_2/run_fmriprep_batch.sh), [`fmriprep_to_afni_bridge.py`](codes/version_2/fmriprep_to_afni_bridge.py) |
+| **0A — fMRI Preprocessing** | fMRIPrep (motion correction, co-registration, normalization to MNI) — requires FreeSurfer license for surface reconstruction; convert to Percent Signal Change, generate censoring masks and motion regressors | [`run_fmriprep_batch.sh`](codes/version_2/run_fmriprep_batch.sh), [`fmriprep_to_afni_bridge.py`](codes/version_2/fmriprep_to_afni_bridge.py) |
 | **0B — Behavioral Modeling** | Fit the Smith et al. dual-rate state-space model per subject (L-BFGS-B) to extract $x_f$, $x_s$ time series | [`run_hybrid_behavioral_fitting.py`](codes/version_2/run_hybrid_behavioral_fitting.py) |
 | **1 — Individualized M1 Localization** | Subject-specific M1 peak via condition GLM (`3dDeconvolve`) within a precentral gyrus mask, with anatomical fallback and group sanity check | [`run_afni_condition_glm.py`](codes/version_2/run_afni_condition_glm.py), [`run_group_M1_GLM.tcsh`](codes/version_2/run_group_M1_GLM.tcsh) |
 | **2 — Multi-Atlas Node Construction** | Build the 482-ROI parcellation: Schaefer 400 (cortex) + AAL3v2 (subcortex/cerebellum) + individualized M1 | [`build_combined_atlas.py`](codes/version_2/build_combined_atlas.py) |
