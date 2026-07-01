@@ -131,6 +131,26 @@ This pipeline uses OpenNeuro dataset [ds005598](https://openneuro.org/datasets/d
 - During the task run, after a **baseline (unrotated) block**, the visual feedback cursor was rotated **45° relative to actual hand-movement direction**, with no washout block — subjects had to adapt to and sustain the rotation for the remainder of the run, with no final de-adaptation phase.
 - Each trial's **angular error** (difference between target direction and initial movement direction) is the raw behavioral measure, fed into the Smith et al. (2006) dual-rate model fit (Phase 0B) to extract the $x_f$ (fast) and $x_s$ (slow) state trajectories used throughout the pipeline.
 
+### Pipeline Flowchart
+
+```mermaid
+flowchart TD
+    A["0A — fMRI Preprocessing\nfMRIPrep + FreeSurfer"] --> C["1 — Individualized M1 Localization"]
+    A --> E
+    B["0B — Behavioral Modeling\nDual-rate fit → xf / xs"] --> G
+    C --> D["2 — Multi-Atlas Node Construction\n482 ROIs: Schaefer 400 + AAL3v2 + M1"]
+    D --> E["3A — Riemannian Manifold Projection\nResting-state covariance → per-subject SPD reference"]
+    D --> H
+    E --> F["3B — Sliding-Window Dynamic FC\n30 TR window · 1 TR step · Ledoit-Wolf"]
+    F --> G["4 — HRF Alignment + VPA\nUnique xf · Unique xs · Shared"]
+    G --> H["5 — Inverse VPA Mapping\nROI vectors → NIfTI"]
+    G --> I["6 — Null Network Validation\nLimbic negative control ✅"]
+    G --> L["Follow-up\nMarginal R² · Between/Within · Permutation"]
+    H --> J["7 — Group Statistics\n3dttest++"]
+    H --> K["8A/8B — Visualization"]
+    J --> K
+```
+
 ### What each stage is for
 
 - **Phase 0A — fMRI Preprocessing**: Raw fMRI data is dominated by head-motion artifacts and scanner drift. fMRIPrep standardizes motion correction, slice-timing correction, and normalization to MNI space across all subjects, and the bridge script converts the output to percent-signal-change with motion/censoring regressors — without this, any downstream connectivity measure would be confounded by subject-specific motion patterns.
